@@ -1,11 +1,16 @@
 version: 2
 
 models:
-  - name: dbt_Diabetes
-    description: "Sample Table"
-    columns:
-      - name: id
-        description: "The primary key for this table"
-        ## tests:
-        ###   - unique
-        ###  - not_null
+
+  - name: dim_customers
+    description: "Retail customer dimension"
+    columns: 
+      - name: CustomerKey 
+        description: "The Primary key for Customers"
+        tests: 
+            - unique
+            - not_null
+            
+        
+
+
