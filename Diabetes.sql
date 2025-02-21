@@ -9,4 +9,4 @@ SELECT [AGE],
 			[S5],
 			[S6],
 			[Y]
-FROM [dbt_Demo1].[dbo].[Diabetes]
+FROM [dbt_Demo1].[dbo].[Diabetes] 
