@@ -40,6 +40,7 @@ SELECT
 			[TotalChillerItems],
 			[LineageKey]
 FROM {{ref("fact_sales")}}
+)
 
 
 select 
