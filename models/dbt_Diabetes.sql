@@ -2,7 +2,10 @@
 
 
 
-{{ config(materialized='table') }}
+{{ config(
+    materialized='table',
+    schema="Fact"
+) }}
 
 with Fact_Diabetes as (
 
@@ -22,4 +25,4 @@ FROM [dbt_Demo1].[dbo].[Diabetes]
 )
 
 select *
-from Fact_Diabetes
+from Diabetes

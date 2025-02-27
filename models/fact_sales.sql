@@ -1,3 +1,11 @@
+
+
+{{ config(
+    materialized='table',
+    schema="Fact"
+    ) }}
+
+With Sales as (
 SELECT  
             sa.[SaleKey],
 			sa.[CityKey],
@@ -21,4 +29,8 @@ SELECT
 			sa.[TotalChillerItems],
 			sa.[LineageKey]
 FROM [dbt_Demo1].[dbo].[Sales] sa
+
+)
+
+select * from Sales
 
