@@ -1,7 +1,7 @@
 version: 2
 
 models:
-  - name: Dim_Customers
+  - name: dim_customers
     description: "Retail customer dimension"
     columns: 
       - name: CustomerKey
@@ -10,7 +10,7 @@ models:
             - unique
             - not_null
          
-  - name: Dim_Cities
+  - name: dim_cities
     description: "Retail Cities dimension"
     columns: 
     - name: CityKey
