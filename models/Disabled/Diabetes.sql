@@ -1,12 +1,4 @@
 
-
-
-
-{{ config(
-    materialized='table',
-    schema="Fact"
-) }}
-
 with Fact_Diabetes as (
 
 SELECT [AGE],

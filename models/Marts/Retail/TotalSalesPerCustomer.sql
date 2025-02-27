@@ -1,8 +1,3 @@
-{{ config(
-    materialized='view',
-    schema="Gold"
-) }}
-
 with Customers as (
 
 SELECT      [CustomerKey],
@@ -16,7 +11,7 @@ SELECT      [CustomerKey],
 			[ValidFrom],
 			[ValidTo],
 			[LineageKey]
-FROM {{ref("dim_Customers")}}
+FROM {{ref("dim_customers")}}
 
 ),  
 
@@ -45,7 +40,6 @@ SELECT
 			[TotalChillerItems],
 			[LineageKey]
 FROM {{ref("fact_sales")}}
-
 )
 
 

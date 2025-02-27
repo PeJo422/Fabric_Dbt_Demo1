@@ -1,7 +1,7 @@
 version: 2
 
 models:
-  - name: dim_Customers
+  - name: dim_customers
     description: "Retail customer dimension"
     columns: 
       - name: CustomerKey
@@ -10,20 +10,23 @@ models:
             - unique
             - not_null
          
+  - name: dim_cities
+    description: "Retail Cities dimension"
+    columns: 
+    - name: CityKey
+      description: "The Primary key for Cities"
+      tests: 
+            - unique
+            - not_null
+
+
   - name: fact_sales
     description: "Retail Sales Fact"
     columns: 
       - name:  SaleKey
         description: "The Primary key for Sale"
-        tests: 
-            - unique
-            - not_null
 
-  - name: my_first_dbt_model
-    description: "Demo for failed test"
-    columns: 
-      - name:  id
-        description: "The Primary key of the table"
+
 
   - name: TotalSalesPerCustomer
     description: "total sales per customer and lineage demo"

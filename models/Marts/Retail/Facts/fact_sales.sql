@@ -1,10 +1,3 @@
-
-
-{{ config(
-    materialized='table',
-    schema="Fact"
-    ) }}
-
 With Sales as (
 SELECT  
             sa.[SaleKey],
