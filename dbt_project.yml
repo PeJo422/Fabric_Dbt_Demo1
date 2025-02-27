@@ -44,9 +44,9 @@ models:
       Retail:
         +materialized: table
         +schema: Fact
-      Marts/Retail/Dimensions:
-        +materialized: table
-        +schema: Dim
-      Marts/Retail/Facts:
-        +schema: Fact
-        +materialized: table
+        Dimensions:
+          +materialized: table
+          +schema: Dim
+        Facts:
+          +schema: Fact
+          +materialized: table
