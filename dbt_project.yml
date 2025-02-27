@@ -43,3 +43,4 @@ models:
       +materialized: table # this applies to all models in the `marts/` directory
       Retail:
         +schema: marketing # this applies to all models in the `marts/marketing/`` directory
+        +materialized: table # this applies to all models in the `marts/` directory
