@@ -42,11 +42,11 @@ models:
     Marts:
       +materialized: view
       Retail:
-        +schema: Fact 
         +materialized: table
-      Dimensions:
-        +schema: Dim
-        +materialized: table 
-      Facts:
         +schema: Fact
-        +materialized: table 
+      Marts/Retail/Dimensions:
+        +materialized: table
+        +schema: Dim
+      Marts/Retail/Facts:
+        +schema: Fact
+        +materialized: table

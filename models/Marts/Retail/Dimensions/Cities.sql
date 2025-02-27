@@ -19,3 +19,5 @@ SELECT      [CityKey],
 FROM [dbt_Demo1].[dbo].[Cities]
 
 )
+
+Select * From Cities
