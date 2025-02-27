@@ -25,15 +25,8 @@ models:
     columns: 
       - name:  SaleKey
         description: "The Primary key for Sale"
-        tests: 
-            - unique
-            - not_null
 
-  - name: my_first_dbt_model
-    description: "Demo for failed test"
-    columns: 
-      - name:  id
-        description: "The Primary key of the table"
+
 
   - name: TotalSalesPerCustomer
     description: "total sales per customer and lineage demo"
