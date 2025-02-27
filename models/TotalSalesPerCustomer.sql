@@ -18,7 +18,7 @@ SELECT      [CustomerKey],
 			[LineageKey]
 FROM {{ref("dim_Customers")}}
 
-), 
+),  
 
 
 Sales as (
