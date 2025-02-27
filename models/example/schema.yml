@@ -10,7 +10,22 @@ models:
         tests: 
             - unique
             - not_null
-            
-        
+         
+  - name: fact_sales
+    description: "Retail Sales Fact"
+    columns: 
+      - name:  SaleKey
+        description: "The Primary key for Sale"
+        tests: 
+            - unique
+            - not_null
 
 
+  - name: my_first_dbt_model
+    description: "Demo for failed test"
+    columns: 
+      - name:  id
+        description: "The Primary key of the table"
+        tests: 
+            - unique
+            - not_null
