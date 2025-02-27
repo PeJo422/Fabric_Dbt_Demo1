@@ -39,16 +39,21 @@ models:
   dbt_demo_with_fabric:
     # Applies to all files under models/example/
     +materialized: view
-    Disabled:
+    Disabled: #Applies to files in the Disabled folder
       +enabled: false
-    Marts:
+    Marts: 
+      #Applies to files in the Marts folder
       +materialized: view
+      +schema: Fact
       Retail:
+      #Applies to files in the Retail folder
         +materialized: table
         +schema: Fact
         Dimensions:
+        #Applies to files in the Dimensions folder
           +materialized: table
           +schema: Dim
         Facts:
+        #Applies to files in the Facts folder
           +schema: Fact
           +materialized: table
