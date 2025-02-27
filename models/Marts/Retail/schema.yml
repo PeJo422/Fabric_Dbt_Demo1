@@ -10,6 +10,16 @@ models:
             - unique
             - not_null
          
+  - name: dim_Cities
+    description: "Retail Cities dimension"
+    columns: 
+    - name: CityKey
+      description: "The Primary key for Cities"
+      tests: 
+            - unique
+            - not_null
+
+
   - name: fact_sales
     description: "Retail Sales Fact"
     columns: 
