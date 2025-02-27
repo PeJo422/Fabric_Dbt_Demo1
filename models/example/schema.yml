@@ -1,11 +1,10 @@
 version: 2
 
 models:
-
-  - name: dim_customers
+  - name: dim_Customers
     description: "Retail customer dimension"
     columns: 
-      - name: CustomerKey 
+      - name: CustomerKey
         description: "The Primary key for Customers"
         tests: 
             - unique

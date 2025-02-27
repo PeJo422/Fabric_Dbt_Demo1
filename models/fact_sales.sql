@@ -2,7 +2,6 @@ SELECT
             sa.[SaleKey],
 			sa.[CityKey],
 			sa.[CustomerKey],
-            cu.Customer,
 			sa.[BillToCustomerKey],
 			sa.[StockItemKey],
 			sa.[InvoiceDateKey],
@@ -23,4 +22,3 @@ SELECT
 			sa.[LineageKey]
 FROM [dbt_Demo1].[dbo].[Sales] sa
 
-Left Join [dbt_Demo1].[dbo].[Customers] cu on cu.CustomerKey = sa.CustomerKey
