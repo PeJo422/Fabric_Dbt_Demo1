@@ -51,7 +51,7 @@ FROM {{ref("fact_sales")}}
 
 select 
 Customers.Customer,
-SUM(Sales.TotalIncludingTax)
+SUM(Sales.TotalIncludingTax) as TotalSales
 from Customers 
 
 Left Join Sales on Customers.CustomerKey = Sales.CustomerKey
