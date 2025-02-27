@@ -57,4 +57,3 @@ from Customers
 Left Join Sales on Customers.CustomerKey = Sales.CustomerKey
 
 GROUP BY Customers.Customer
-Order by SUM(Sales.TotalIncludingTax) Desc
