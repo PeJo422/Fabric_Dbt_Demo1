@@ -2,9 +2,9 @@
 
 
 
-{{ config(m
-aterialized='table',
-schema="Dim"
+{{ config(
+    materialized='table',
+    schema="Dim"
 ) }}
 
 with Dim_Customers as (
