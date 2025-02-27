@@ -42,7 +42,7 @@ models:
     Marts:
       +materialized: view
       Retail:
-        +schema: fact 
+        +schema: Fact 
         +materialized: table
       Dimensions:
         +schema: Dim
