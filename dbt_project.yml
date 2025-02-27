@@ -38,9 +38,15 @@ clean-targets:         # directories to be removed by `dbt clean`
 models:
   dbt_demo_with_fabric:
     # Applies to all files under models/example/
-    +materialized: view # this applies to all models in the current project
+    +materialized: view
     Marts:
-      +materialized: table # this applies to all models in the `marts/` directory
+      +materialized: view
       Retail:
-        +schema: marketing # this applies to all models in the `marts/marketing/`` directory
-        +materialized: table # this applies to all models in the `marts/` directory
+        +schema: fact 
+        +materialized: table
+      Dimensions:
+        +schema: Dim
+        +materialized: table 
+      Facts:
+        +schema: Fact
+        +materialized: table 
