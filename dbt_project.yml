@@ -15,7 +15,7 @@ profile: 'default'
 model-paths: ["models"]
 # analysis-paths: ["analyses"]
 test-paths: ["tests"]
-# seed-paths: ["seeds"]
+seed-paths: ["seeds"]
 macro-paths: ["macros"]
 snapshot-paths: ["snapshots"]
 
@@ -37,10 +37,11 @@ clean-targets:         # directories to be removed by `dbt clean`
 
 models:
   dbt_demo_with_fabric:
-    # Applies to all files under models/example/
+    # Applies to all files under models
     +materialized: view
+    +schema: dbo
     Disabled: #Applies to files in the Disabled folder
-      +enabled: false
+      +enabled: false #All files/Models in the disabled folder will be set to 'disbled'
     Marts: 
       #Applies to files in the Marts folder
       +materialized: view
